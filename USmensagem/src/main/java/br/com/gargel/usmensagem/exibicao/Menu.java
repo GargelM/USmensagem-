@@ -18,6 +18,7 @@ public class Menu {
 		System.out.println("Selecione umas das opções");
 		System.out.println("0 - Sair do sistema");
 		System.out.println("1 - Cadastrar IP");
+		System.out.println("2 - Exibir IP");
 		System.out.print("\nDigite sua opcao: ");
 		realizarAcao(USUtil.converterParaInteiro(validarEntrada(leitor.nextLine())));
 	}
@@ -55,6 +56,10 @@ public class Menu {
 		case 1: {
 			new IpService().cadastrarIp(leitor, this);
 			break;
+		}
+		case 2: {
+			System.out.println(new IpService().getIp());
+			this.exibirMenu();
 		}
 		default: {
 			this.exibirMenu();
