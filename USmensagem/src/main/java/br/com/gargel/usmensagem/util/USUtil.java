@@ -10,4 +10,15 @@ public class USUtil {
 		}
 	}
 
+	public static void mostrarPontos(long tempo) {
+		for (int i = 0; i < 4; i++) {
+			try {
+				Thread.sleep(tempo * 500);
+				System.out.print(".");
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
 }

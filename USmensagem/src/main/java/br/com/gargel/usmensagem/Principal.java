@@ -1,12 +1,13 @@
 package br.com.gargel.usmensagem;
 
 import br.com.gargel.usmensagem.exibicao.Menu;
+import br.com.gargel.usmensagem.service.chat.Chat;
+import br.com.gargel.usmensagem.util.USUtil;
 
 public class Principal {
 	
-	public static int MINUTOS = 2;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		exibirMensagem();
 		new Menu().exibirMenu();
 	}
@@ -20,13 +21,14 @@ public class Principal {
 				+ " \\___/\\____/|_| |_| |_|\\___|_| |_|___/\\__,_|\\__, |\\___|_| |_| |_|\r\n"
 				+ "                                             __/ |               \r\n"
 				+ "                                            |___/                \r");
-		System.out.println("Inicializando Sistema..");
-		try {
-			Thread.sleep(MINUTOS * 1000);
-		} catch (InterruptedException e) {
-		}
+		System.out.print("\nInicializando Sistema");
+		USUtil.mostrarPontos(1);
+		System.out.println();
 		System.out.println("Pronto!");
 	}
 	
+	//chat = new Chat("TopicCF", this.titulo, this.nomeUsuario, "192.168.0.107", this);
+	//Chat chat = new Chat("TopicCF", "topicChat", "gargel", "192.168.0.112");
+
 	
 }

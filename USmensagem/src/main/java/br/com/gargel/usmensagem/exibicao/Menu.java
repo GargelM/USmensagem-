@@ -2,8 +2,9 @@ package br.com.gargel.usmensagem.exibicao;
 
 import java.util.Scanner;
 
-import br.com.gargel.usmensagem.IpService;
 import br.com.gargel.usmensagem.exception.USmensagemException;
+import br.com.gargel.usmensagem.service.ChatService;
+import br.com.gargel.usmensagem.service.IpService;
 import br.com.gargel.usmensagem.util.USUtil;
 import br.com.gargel.usmensagem.validadores.IsPositivoValidador;
 import br.com.gargel.usmensagem.validadores.StringVaziaValidador;
@@ -42,14 +43,7 @@ public class Menu {
 		switch (validarEntrada) {
 		case 0: {
 			System.out.print("\n\nEncerrando");
-			for (int i = 0; i < 4; i++) {
-				try {
-					Thread.sleep(1000);
-					System.out.print(".");
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
+			USUtil.mostrarPontos(1);
 			System.exit(0);
 			break;
 		}
@@ -61,11 +55,16 @@ public class Menu {
 			System.out.println(new IpService().getIp());
 			this.exibirMenu();
 		}
+		case 3: {
+			new ChatService().abrirChat(leitor);
+		}
 		default: {
 			this.exibirMenu();
 			break;
 		}
 		}
 	}
+
+	
 
 }

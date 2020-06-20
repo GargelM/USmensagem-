@@ -1,7 +1,5 @@
-package br.com.gargel.usmensagem;
+package br.com.gargel.usmensagem.service;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.Scanner;
 
 //import org.omg.CORBA.portable.UnknownException;
