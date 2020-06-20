@@ -2,6 +2,7 @@ package br.com.gargel.usmensagem.exibicao;
 
 import java.util.Scanner;
 
+import br.com.gargel.usmensagem.IpService;
 import br.com.gargel.usmensagem.exception.USmensagemException;
 import br.com.gargel.usmensagem.util.USUtil;
 import br.com.gargel.usmensagem.validadores.IsPositivoValidador;
@@ -15,9 +16,9 @@ public class Menu {
 
 		System.out.println("\n\nBem-vindo ao menu!\n");
 		System.out.println("Selecione umas das opções");
-		System.out.print("0");
-		System.out.print(" - Sair do sistema");
-		System.out.print("\n\nDigite sua opcao: ");
+		System.out.println("0 - Sair do sistema");
+		System.out.println("1 - Cadastrar IP");
+		System.out.print("\nDigite sua opcao: ");
 		realizarAcao(USUtil.converterParaInteiro(validarEntrada(leitor.nextLine())));
 	}
 
@@ -49,6 +50,10 @@ public class Menu {
 				}
 			}
 			System.exit(0);
+			break;
+		}
+		case 1: {
+			new IpService().cadastrarIp(leitor, this);
 			break;
 		}
 		default: {
