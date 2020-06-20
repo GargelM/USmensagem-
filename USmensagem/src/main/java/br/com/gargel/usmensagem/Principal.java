@@ -4,7 +4,7 @@ import br.com.gargel.usmensagem.exibicao.Menu;
 
 public class Principal {
 	
-	public static int MINUTOS = 2;
+	public static int MINUTOS = 1;
 	
 	public static void main(String[] args) {
 		exibirMensagem();
