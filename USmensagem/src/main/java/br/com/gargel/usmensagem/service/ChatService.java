@@ -11,7 +11,7 @@ public class ChatService {
 
 	public void abrirChat(Scanner leitor) {
 		String nome = obterNome(leitor);
-		Chat chat = ChatFactory.getInstance("TopicCF", "topicChat", nome, "192.168.0.112");
+		Chat chat = ChatFactory.getInstance("TopicCF", "topicChat", nome);
 		String texto = "";
 		while(!texto.equals(":q!")) {
 			texto = leitor.nextLine();
@@ -23,11 +23,20 @@ public class ChatService {
 				}
 			}
 		}
+		fecharChat(chat);
 	}
 
 	private String obterNome(Scanner leitor) {
 		System.out.print("Digite seu nome:");
 		return leitor.nextLine();
+	}
+	
+	public void fecharChat(Chat chat) {
+		try {
+			chat.close();
+		} catch (JMSException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -1,7 +1,6 @@
 package br.com.gargel.usmensagem;
 
-import br.com.gargel.usmensagem.exibicao.Menu;
-import br.com.gargel.usmensagem.service.chat.Chat;
+import br.com.gargel.usmensagem.exibicao.menu.MenuService;
 import br.com.gargel.usmensagem.util.USUtil;
 
 public class Principal {
@@ -9,7 +8,7 @@ public class Principal {
 	
 	public static void main(String[] args) throws Exception {
 		exibirMensagem();
-		new Menu().exibirMenu();
+		new MenuService();		
 	}
 
 	private static void exibirMensagem() {
