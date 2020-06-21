@@ -1,6 +1,6 @@
 package br.com.gargel.usmensagem.exception;
 
-public class USmensagemException extends Exception {
+public class USmensagemException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 

@@ -4,6 +4,6 @@ import br.com.gargel.usmensagem.exception.USmensagemException;
 
 public interface Validador {
 
-	boolean validar(Object objeto) throws USmensagemException;
+	boolean validar(String objeto) throws USmensagemException;
 
 }

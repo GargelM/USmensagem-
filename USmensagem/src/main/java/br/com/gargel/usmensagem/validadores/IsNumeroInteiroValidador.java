@@ -2,10 +2,10 @@ package br.com.gargel.usmensagem.validadores;
 
 import br.com.gargel.usmensagem.exception.USmensagemException;
 
-public class IsNumeroValidador implements Validador {
+public class IsNumeroInteiroValidador implements Validador {
 
 	@Override
-	public boolean validar(Object objeto) throws USmensagemException {
+	public boolean validar(String objeto) throws USmensagemException {
 		try {
 			Integer.parseInt((String) objeto);
 			return true;

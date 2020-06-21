@@ -5,7 +5,7 @@ import br.com.gargel.usmensagem.exception.USmensagemException;
 public class StringVaziaValidador implements Validador {
 
 	@Override
-	public boolean validar(Object objeto) throws USmensagemException {
+	public boolean validar(String objeto) throws USmensagemException {
 		try {
 			String texto = (String) objeto;
 			return texto.trim().isEmpty();
