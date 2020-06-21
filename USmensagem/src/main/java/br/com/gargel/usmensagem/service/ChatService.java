@@ -13,9 +13,9 @@ public class ChatService {
 		String nome = obterNome(leitor);
 		Chat chat = ChatFactory.getInstance("TopicCF", "topicChat", nome);
 		String texto = "";
-		while(!texto.equals(":q!")) {
+		while (!texto.equals(":q!")) {
 			texto = leitor.nextLine();
-			if(!texto.equals(":q!")) {
+			if (!texto.equals(":q!")) {
 				try {
 					chat.escreverMensagem(nome, texto);
 				} catch (JMSException e) {
@@ -30,7 +30,7 @@ public class ChatService {
 		System.out.print("Digite seu nome:");
 		return leitor.nextLine();
 	}
-	
+
 	public void fecharChat(Chat chat) {
 		try {
 			chat.close();

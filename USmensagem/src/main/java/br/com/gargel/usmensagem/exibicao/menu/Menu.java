@@ -12,12 +12,13 @@ public class Menu {
 
 	Scanner leitor = new Scanner(System.in);
 	boolean primeiraExecucao = true;
+
 	Menu() {
 
 	}
 
 	public void exibirMenu() {
-		if(primeiraExecucao) {
+		if (primeiraExecucao) {
 			new CadastrarIpAcao().executar(leitor);
 			primeiraExecucao = false;
 		}

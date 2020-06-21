@@ -18,6 +18,7 @@ public enum OperacaoEnum {
 	private OperacaoEnum(AcaoMenu acao) {
 		this.acao = acao;
 	}
+	
 	public AcaoMenu getAcao() {
 		return acao;
 	}

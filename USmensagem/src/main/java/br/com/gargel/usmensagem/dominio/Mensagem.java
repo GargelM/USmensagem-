@@ -42,9 +42,7 @@ public class Mensagem {
 
 	@Override
 	public String toString() {
-		return this.nome + "xXx" + this.texto + "xXx" + this.dataHora; 
+		return this.nome + "xXx" + this.texto + "xXx" + this.dataHora;
 	}
-	
-	
 
 }

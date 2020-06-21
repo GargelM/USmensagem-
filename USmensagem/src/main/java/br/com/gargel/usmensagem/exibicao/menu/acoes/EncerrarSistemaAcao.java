@@ -6,7 +6,7 @@ import br.com.gargel.usmensagem.exibicao.menu.MenuEstado;
 import br.com.gargel.usmensagem.exibicao.menu.MenuService;
 import br.com.gargel.usmensagem.util.USUtil;
 
-public class EncerrarSistemaAcao implements AcaoMenu{
+public class EncerrarSistemaAcao implements AcaoMenu {
 
 	@Override
 	public void executar(Scanner leitor) {
@@ -15,6 +15,4 @@ public class EncerrarSistemaAcao implements AcaoMenu{
 		USUtil.mostrarPontos(1);
 	}
 
-	
-	
 }

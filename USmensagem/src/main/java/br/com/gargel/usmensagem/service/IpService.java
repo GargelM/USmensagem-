@@ -9,7 +9,7 @@ public class IpService {
 	public void cadastrarIp(Scanner leitor) {
 		System.out.print("Digite o IP do servidor de mensagens: ");
 		ip = leitor.nextLine();
-		if (ip.isEmpty()) {			
+		if (ip.isEmpty()) {
 			cadastrarIp(leitor);
 		}
 	}

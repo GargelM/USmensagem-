@@ -4,7 +4,7 @@ public class MenuService {
 
 	private static Menu menu;
 	private static MenuEstado proximoEstado = MenuEstado.CONTINUACAO;
-	
+
 	public MenuService() {
 		menu = new Menu();
 		this.executarLoopMenu();

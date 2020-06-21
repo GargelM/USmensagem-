@@ -5,5 +5,5 @@ import java.util.Scanner;
 public interface AcaoMenu {
 
 	public void executar(Scanner leitor);
-	
+
 }

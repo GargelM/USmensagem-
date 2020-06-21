@@ -4,11 +4,10 @@ import br.com.gargel.usmensagem.exibicao.menu.MenuService;
 import br.com.gargel.usmensagem.util.USUtil;
 
 public class Principal {
-	
-	
+
 	public static void main(String[] args) throws Exception {
 		exibirMensagem();
-		new MenuService();		
+		new MenuService();
 	}
 
 	private static void exibirMensagem() {
@@ -25,9 +24,5 @@ public class Principal {
 		System.out.println();
 		System.out.println("Pronto!");
 	}
-	
-	//chat = new Chat("TopicCF", this.titulo, this.nomeUsuario, "192.168.0.107", this);
-	//Chat chat = new Chat("TopicCF", "topicChat", "gargel", "192.168.0.112");
 
-	
 }

@@ -13,5 +13,5 @@ public class ChatFactory {
 		}
 		return chat;
 	}
-	
+
 }
