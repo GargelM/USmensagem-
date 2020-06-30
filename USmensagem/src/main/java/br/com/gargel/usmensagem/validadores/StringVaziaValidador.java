@@ -2,6 +2,9 @@ package br.com.gargel.usmensagem.validadores;
 
 import br.com.gargel.usmensagem.exception.USmensagemException;
 
+/**
+ * Classe que deve validar se uma String está vazia.
+ */
 public class StringVaziaValidador implements Validador {
 
 	@Override

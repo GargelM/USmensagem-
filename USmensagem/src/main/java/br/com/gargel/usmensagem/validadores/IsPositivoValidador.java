@@ -2,6 +2,9 @@ package br.com.gargel.usmensagem.validadores;
 
 import br.com.gargel.usmensagem.exception.USmensagemException;
 
+/**
+ * Classe que deve validar se um número é positivo.
+ */
 public class IsPositivoValidador implements Validador {
 
 	@Override

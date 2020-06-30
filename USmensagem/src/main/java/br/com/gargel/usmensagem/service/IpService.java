@@ -2,6 +2,9 @@ package br.com.gargel.usmensagem.service;
 
 import java.util.Scanner;
 
+/**
+ * Classe que tem como função armazenar o ip global do servidor de mensagens.
+ */
 public class IpService {
 
 	private static String ip = "";

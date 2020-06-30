@@ -7,6 +7,9 @@ import javax.jms.JMSException;
 import br.com.gargel.usmensagem.service.chat.Chat;
 import br.com.gargel.usmensagem.service.chat.ChatFactory;
 
+/**
+ * Classe que tem função de realizar as comunicações com o servidor de mensagens.
+ */
 public class ChatService {
 
 	public void abrirChat(Scanner leitor) {

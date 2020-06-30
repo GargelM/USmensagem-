@@ -19,16 +19,17 @@ import br.com.gargel.usmensagem.service.ThreadRunner;
 import br.com.gargel.usmensagem.service.threads.EnvioDeMensagemThread;
 import br.com.gargel.usmensagem.service.threads.ImpressaoDeMensagemThread;
 
+/**
+ * Classe que tem como função inicializar a comunicação com o servidor de mensagens e escutar novas mensagens.
+ */
 public class Chat implements MessageListener {
 
 	private TopicSession pubSession;
 	private TopicPublisher publisher;
 	private TopicConnection connection;
-	private String nomeDeUsuario;
 
 	Chat(String fabricaDeTopic, String nomeDoTopico, String nomeDeUsuario, String ip) throws Exception {
 
-		this.nomeDeUsuario = nomeDeUsuario;
 		InitialContext contexto = new InitialContext();
 
 		TopicConnectionFactory fabricaDeConexaoDeTopic = new ActiveMQConnectionFactory("admin", "admin",

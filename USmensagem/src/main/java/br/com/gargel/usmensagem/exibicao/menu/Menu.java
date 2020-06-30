@@ -8,11 +8,17 @@ import br.com.gargel.usmensagem.exibicao.menu.acoes.CadastrarIpAcao;
 import br.com.gargel.usmensagem.validadores.IsPositivoValidador;
 import br.com.gargel.usmensagem.validadores.StringVaziaValidador;
 
+/**
+ * Classe responsável pela impressão do Menu e seu desvio de fluxo, de acordo com a entrada do usuário. 
+ */
 public class Menu {
 
 	Scanner leitor = new Scanner(System.in);
 	boolean primeiraExecucao = true;
 
+	/**
+	 * Construtor escondido no pacote para ser iniciado pelo MenuService.
+	 */
 	Menu() {
 
 	}

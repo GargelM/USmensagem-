@@ -1,5 +1,9 @@
 package br.com.gargel.usmensagem.util;
 
+/**
+ * Classes com funções para auxilio nas rotinas do sistema.
+ *
+ */
 public class USUtil {
 
 	public static Integer converterParaInteiro(String validarEntrada) {

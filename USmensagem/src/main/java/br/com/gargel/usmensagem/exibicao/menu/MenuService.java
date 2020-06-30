@@ -1,5 +1,9 @@
 package br.com.gargel.usmensagem.exibicao.menu;
 
+/**
+ * Classe responsável pela inicialização do Menu ao console e seu loop.
+ *
+ */
 public class MenuService {
 
 	private static Menu menu;
