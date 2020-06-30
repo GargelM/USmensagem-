@@ -51,6 +51,9 @@ public class Chat implements MessageListener {
 		conexao.start();
 	}
 
+	/**
+	 * Ao receber mensagem..
+	 */
 	public void onMessage(Message mensagem) {
 		TextMessage textMessage = (TextMessage) mensagem;
 		try {
