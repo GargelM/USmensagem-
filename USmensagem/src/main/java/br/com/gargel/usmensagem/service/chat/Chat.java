@@ -15,14 +15,20 @@ import javax.naming.InitialContext;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
+import br.com.gargel.usmensagem.service.ThreadRunner;
+import br.com.gargel.usmensagem.service.threads.EnvioDeMensagemThread;
+import br.com.gargel.usmensagem.service.threads.ImpressaoDeMensagemThread;
+
 public class Chat implements MessageListener {
 
 	private TopicSession pubSession;
 	private TopicPublisher publisher;
 	private TopicConnection connection;
+	private String nomeDeUsuario;
 
 	Chat(String fabricaDeTopic, String nomeDoTopico, String nomeDeUsuario, String ip) throws Exception {
 
+		this.nomeDeUsuario = nomeDeUsuario;
 		InitialContext contexto = new InitialContext();
 
 		TopicConnectionFactory fabricaDeConexaoDeTopic = new ActiveMQConnectionFactory("admin", "admin",
@@ -47,17 +53,14 @@ public class Chat implements MessageListener {
 	public void onMessage(Message mensagem) {
 		TextMessage textMessage = (TextMessage) mensagem;
 		try {
-			System.out.println(textMessage.getText());
+			ThreadRunner.run(new ImpressaoDeMensagemThread(textMessage.getText()));
 		} catch (JMSException e) {
 			e.printStackTrace();
 		}
 	}
 
 	public void escreverMensagem(String usuario, String texto) throws JMSException {
-
-		TextMessage message = pubSession.createTextMessage();
-		message.setText(usuario + " diz: " + texto);
-		publisher.publish(message);
+		ThreadRunner.run(new EnvioDeMensagemThread(pubSession, publisher, usuario, texto));
 	}
 
 	public void close() throws JMSException {
