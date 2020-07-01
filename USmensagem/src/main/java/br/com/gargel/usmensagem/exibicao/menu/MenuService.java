@@ -18,7 +18,6 @@ public class MenuService {
 		while (proximoEstado.equals(MenuEstado.CONTINUACAO)) {
 			executarProcedimentoPadrao();
 		}
-		System.exit(0);
 	}
 
 	private void executarProcedimentoPadrao() {

@@ -7,7 +7,7 @@ import br.com.gargel.usmensagem.exibicao.menu.acoes.ExecutarChatAcao;
 import br.com.gargel.usmensagem.exibicao.menu.acoes.ExibirIpAcao;
 
 /**
- * Enum responsável por armazenas as ações a serem executadas de acordo com a opçao de entrada do usuário no Menu.
+ * Enum responsável por armazenar as ações a serem executadas de acordo com a opçao de entrada do usuário no Menu.
  *
  */
 public enum OperacaoEnum {
